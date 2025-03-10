@@ -1,0 +1,150 @@
+:root{
+    --color-principal: #041c52dd;
+    --color-secondaire: #606C5A;
+    /* --color-principal: #B0B9A8; */
+    --color-dark-principal: #15375b;
+    --color-bg-profil: #1b606e;
+    
+}
+
+
+/* *{
+    margin: 0;
+    background: rgb(48, 29, 29);
+} */
+
+.bg-profil{
+    transform: translate(45%, 90%);
+    position: absolute;
+    height: 180px;
+    width: 180px;
+    z-index: -1;
+    border-radius: 100%;
+    
+    
+}
+/* .item-1, .item-2, .item-3, .item-4{
+    border: solid; 
+}*/
+
+
+.item-1{
+    background-color: #9e0000;
+    bottom: 235px;
+    left: 95px;
+}
+.item-2{
+    background-color: #009e15;
+    bottom: 235px;
+    right: 95px;
+    
+}
+.item-3{
+    background-color: #a7df85;
+    bottom: 55px;
+    left: 95px;
+}
+.item-4{
+    background-color: #7e6b6d;
+    bottom: 55px;
+    right: 95px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wrapper{
+    overflow: hidden;
+    margin-inline: auto;
+    height: 50px;
+    mask-image: linear-gradient(to right, transparent, black 40px, black calc(100% - 20px), transparent);
+}
+@keyframes scrollleft{
+    to{
+        left: -200px;
+    }
+
+}
+
+@keyframes scrollright{
+    to{
+        right: -200px;
+    }
+
+}
+.item-left{
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    position: absolute;
+    left: max(calc(200px * 4), 100%);
+    animation: scrollleft 30s ease-out infinite;
+
+}
+.item1{
+    animation-delay: calc(30s / 4 * (4 - 1) * -1);
+}
+.item2{
+    animation-delay: calc(30s / 4 * (4 - 2) * -1);
+}
+.item3{
+
+    animation-delay: calc(30s / 4 * (4 - 3) * -1);
+}
+.item4{
+
+    animation-delay: calc(30s / 4 * (4 - 4) * -1);
+}
+/* .item4{
+
+    animation-delay: calc(30s / 4 * (4 - 4) * -1);
+} */
+
+.item-right{
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    position: absolute;
+    right: max(calc(200px * 4), 100%);
+    animation: scrollright 30s linear infinite;
+}
+.item1{
+    animation-delay: calc(30s / 4 * (4 - 1) * -1);
+}
+.item2{
+    animation-delay: calc(30s / 4 * (4 - 2) * -1);
+}
+.item3{
+
+    animation-delay: calc(30s / 4 * (4 - 3) * -1);
+}
+/* .item4{
+
+    animation-delay: calc(30s / 4 * (4 - 4) * -1);
+} */
+
+.fade-in-profil{
+    mask-image: linear-gradient(rgba(0, 0, 0, 1), transparent);
+    mask-position: bottom right;
+    animation: fade-in linear;
+    animation-timeline: view();
+    opacity: 1;
+}
+
+@keyframes fade-in{
+    to {
+        scale: .8;
+    }
+    
+}
+
